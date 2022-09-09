@@ -1,7 +1,7 @@
 class CreateNewsletters < ActiveRecord::Migration[6.1]
   def change
-    create_table :newletters do |t|
-      t.string :emaila_address
+    create_table :news_letters do |t|
+      t.string :email_address
       t.timestamps
     end
   end

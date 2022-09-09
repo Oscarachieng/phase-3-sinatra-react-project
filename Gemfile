@@ -42,6 +42,8 @@ group :development do
   # https://github.com/alexch/rerun
   gem "rerun"
 end
+gem 'rest-client', '~> 2.1'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 # These gems will only be used when we are running tests
 group :test do
