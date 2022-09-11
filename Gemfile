@@ -44,6 +44,8 @@ group :development do
 end
 gem 'rest-client', '~> 2.1'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+gem 'sinatra-flash'
 
 # These gems will only be used when we are running tests
 group :test do

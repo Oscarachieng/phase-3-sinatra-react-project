@@ -1,5 +1,12 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
+
+
+  configure do 
+    enable :sessions
+    set :sessions_secret, "secret"
+    register sinatra::flash
+  end
   
   # Add your routes here
   get "/products" do 
