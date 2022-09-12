@@ -34,7 +34,8 @@ end
     User.create(
       name: user["profile_name"],
       email_address: Faker::Internet.email,
-      location: user["review_country"]
+      location: user["review_country"],
+      password: user["password"]
     )
   end
 

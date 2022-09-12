@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+ruby "2.7.4"
 
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
@@ -45,7 +46,7 @@ end
 gem 'rest-client', '~> 2.1'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
-gem 'sinatra-flash'
+gem 'sinatra-flash', '~> 0.3.0'
 
 # These gems will only be used when we are running tests
 group :test do
@@ -53,4 +54,8 @@ group :test do
   gem "rack-test", "~> 1.1"
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
+end
+
+group :production do
+  gem 'pg', '~> 1.4', '>= 1.4.3'
 end

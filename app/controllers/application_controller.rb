@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
   configure do 
     enable :sessions
     set :sessions_secret, "secret"
-    register sinatra::flash
+    register Sinatra::Flash
   end
   
   # Add your routes here
@@ -63,7 +63,8 @@ class ApplicationController < Sinatra::Base
     new_user = User.create(
       name: params[:name],
       location: params[:location],
-      email_address: params[:email]
+      email_address: params[:email],
+      password: params[:password]
     )
     new_user.to_json
   end
