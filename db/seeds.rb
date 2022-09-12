@@ -35,7 +35,7 @@ end
       name: user["profile_name"],
       email_address: Faker::Internet.email,
       location: user["review_country"],
-      password: user["password"]
+      password: Faker::Internet.password(min_length: 10, max_length: 24, mix_case: true, special_characters: true)
     )
   end
 
